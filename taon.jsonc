@@ -1,0 +1,11 @@
+{
+  "type": "isomorphic-lib",
+  "version": "v19",
+  "appId": "com.domain.example.piano-cli",
+
+  "packageJsonOverride": {
+    "author": "Darek",
+    "description": "Description for piano-cli. Hello world!",
+    "private": true
+  }
+}
