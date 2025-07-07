@@ -6,6 +6,7 @@
   "packageJsonOverride": {
     "author": "Darek",
     "description": "Description for piano-cli. Hello world!",
-    "private": true
+    "private": true,
+    "scripts": {}
   }
 }

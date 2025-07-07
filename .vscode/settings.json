@@ -9,8 +9,8 @@
   ],
   "window.title": "npm/cli-tools/piano-cli  [ ${activeEditorShort} ]",
   "workbench.colorCustomizations": {
-    "activityBar.background": "#54a93d",
-    "statusBar.background": "#92922a",
+    "activityBar.background": "#9d3acb",
+    "statusBar.background": "#854c2e",
     "statusBar.debuggingBackground": "#15d8ff"
   },
   "files.watcherExclude": {
