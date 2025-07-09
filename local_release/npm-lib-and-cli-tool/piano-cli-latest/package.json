@@ -1,0 +1,16 @@
+{
+  "name": "piano-cli",
+  "version": "0.0.1",
+  "scripts": {},
+  "author": "Darek",
+  "private": true,
+  "dependencies": {},
+  "description": "Description for piano-cli. Hello world!",
+  "main": "dist/app.electron.js",
+  "bin": {
+    "piano": "bin/piano",
+    "piano-debug": "bin/piano-debug",
+    "piano-debug-brk": "bin/piano-debug-brk"
+  },
+  "peerDependencies": {}
+}
