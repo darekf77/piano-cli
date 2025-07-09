@@ -1,5 +1,6 @@
 import { BaseProject } from 'tnp-helpers/src';
 
+import { Git } from './git';
 import { ProjectResolver } from './project-resolver';
 import type { Vscode } from './vscode';
 
@@ -17,6 +18,7 @@ export class ProjectPiano extends BaseProject<ProjectPiano> {
     this.vsCodeHelpers = new (require('./vscode').Vscode as typeof Vscode)(
       this,
     );
+    this.git = new (require('./git').Git as typeof Git)(this as any);
   }
   //#endregion
 }

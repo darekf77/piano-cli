@@ -9,8 +9,8 @@
   ],
   "window.title": "npm/cli-tools/piano-cli  [ ${activeEditorShort} ]",
   "workbench.colorCustomizations": {
-    "activityBar.background": "#9d3acb",
-    "statusBar.background": "#854c2e",
+    "activityBar.background": "#c03046",
+    "statusBar.background": "#9ca93d",
     "statusBar.debuggingBackground": "#15d8ff"
   },
   "files.watcherExclude": {
@@ -153,5 +153,9 @@
     "**/index.js": true,
     "**/index.d.ts": true,
     "**/index.js.map": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
   }
 }
