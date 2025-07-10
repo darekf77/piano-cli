@@ -22,6 +22,8 @@ export class Vscode // @ts-ignore TODO weird inheritance problem
       ...extensions,
       'pheianox.solidjs-snippets',
       'solidjs-community.solid-snippets',
+      'vscjava.vscode-java-pack',
+      'redhat.vscode-community-server-connector',
     ];
   }
 }

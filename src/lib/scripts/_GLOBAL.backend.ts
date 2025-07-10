@@ -2,7 +2,7 @@
 import { path } from 'tnp-core/src';
 import { chalk, crossPlatformPath } from 'tnp-core/src';
 import { Helpers, BaseGlobalCommandLine, CoreProject } from 'tnp-helpers/src';
-
+import { corePorjectsMap } from '../core-projects';
 import { ProjectPiano } from '../project';
 //#endregion
 
@@ -17,6 +17,15 @@ class $Global extends BaseGlobalCommandLine<{}, ProjectPiano> {
 
   test() {
     Helpers.warn('This is a test command. It does nothing.');
+    this._exit();
+  }
+
+  coreProjects() {
+    Helpers.info('Available core projects:');
+    corePorjectsMap.values();
+    CoreProject.coreProjects.forEach(project => {
+      console.log(project.name);
+    });
     this._exit();
   }
 }
