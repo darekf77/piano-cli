@@ -16,7 +16,8 @@ export async function run(argsv: string[]) {
     useStringArrForArgsFunctions: true,
     shortArgsReplaceConfig: {
       b: 'build',
-      bw: 'build:watch'
+      bw: 'build:watch',
+      s: 'start',
     },
     callbackNotRecognizedCommand: async ({
       runGlobalCommandByName,
