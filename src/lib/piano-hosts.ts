@@ -1,4 +1,3 @@
-//#region @backend
 import { _ } from 'tnp-core/src';
 import { EtcHosts, HostForServer } from 'vpn-split/src';
 
@@ -18,13 +17,10 @@ export const globalHost = {
   'nexus.piano.io': HostForServer.From({
     ipOrDomain: '10.100.12.56', // '10.100.192.8',
     aliases: 'nexus.piano.io' as any,
+    skipUpdateOfServerEtcHosts: true,
   }),
 } as EtcHosts;
 
 export const allHosts: EtcHosts = {
   ...globalHost,
 };
-
-//#endregion
-
-//#endregion

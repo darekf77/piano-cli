@@ -21,7 +21,10 @@ export class ProjectResolver extends BaseProjectResolver<ProjectPiano> {
       return;
     }
 
-    if (Helpers.exists([location, 'pom.xml'])) {
+    if (
+      Helpers.exists([location, 'pom.xml']) ||
+      Helpers.exists([location, 'build.gradle'])
+    ) {
       return 'java-backend';
     }
 
@@ -45,7 +48,7 @@ export class ProjectResolver extends BaseProjectResolver<ProjectPiano> {
     // #endregion
   }
 
-  From(locationOfProject: string | string[]) {
+  From(locationOfProject: string | string[]): ProjectPiano | undefined {
     //#region @websqlFunc
     if (Array.isArray(locationOfProject)) {
       locationOfProject = locationOfProject.join('/');
