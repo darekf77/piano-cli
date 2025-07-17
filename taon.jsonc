@@ -6,6 +6,9 @@
   "packageJsonOverride": {
     "author": "Darek",
     "description": "Description for piano-cli. Hello world!",
-    "private": true
+    "private": true,
+    "scripts": {
+      "link:latest": "cd local_release/npm-lib-and-cli-tool/piano-cli-latest && npm link",
+    }
   }
 }

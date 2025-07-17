@@ -1,1 +1,2 @@
-export * from './my-organization-proj';
+export * from './project';
+export * from './piano-hosts';

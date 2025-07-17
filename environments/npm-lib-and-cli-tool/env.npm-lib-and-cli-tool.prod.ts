@@ -6,6 +6,10 @@ const env: Partial<EnvOptions> = {
   release: {
     cli: {
       includeNodeModules: true,
+      minify: true,
+    },
+    lib: {
+      doNotIncludeLibFiles: true,
     },
   },
 };

@@ -8,7 +8,5 @@
   "priorityOrder": [],
   "mapTitlesNames": {
     "README.md": "Introduction"
-  },
-  "customCssPath": "custom.css",
-  "customJsPath": "custom.js"
+  }
 }

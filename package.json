@@ -1,7 +1,8 @@
 {
   "name": "piano-cli",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "scripts": {
+    "link:latest": "cd local_release/npm-lib-and-cli-tool/piano-cli-latest && npm link",
     "taon init": "taon init",
     "taon start": "taon start",
     "taon build:lib": "taon build:lib",
@@ -177,6 +178,7 @@
     "express-fileupload": "~1.5.1",
     "express-session": "~1.18.1",
     "fast-glob": "~3.3.2",
+    "favicons": "~7.2.0",
     "file-loader": "~1.1.11",
     "file-saver": "2.0.5",
     "file-type": "~17.1.6",
@@ -229,6 +231,7 @@
     "lodash-walk-object": "~19.0.0",
     "lowdb": "7.0.1",
     "magic-renamer": "~19.0.0",
+    "mariadb": "~3.4.4",
     "material-design-icons": "3.0.1",
     "method-override": "^2.3.10",
     "minimist": "~1.2.8",
@@ -357,5 +360,9 @@
   },
   "description": "Description for piano-cli. Hello world!",
   "main": "dist/app.electron.js",
-  "bin": {}
+  "bin": {
+    "piano": "bin/piano",
+    "piano-debug": "bin/piano-debug",
+    "piano-debug-brk": "bin/piano-debug-brk"
+  }
 }
