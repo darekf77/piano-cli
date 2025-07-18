@@ -51,7 +51,7 @@ async function VPN(args: string[]) {
 }
 
 function OPEN_HOSTS() {
-  Helpers.openFolderInFileExploer(path.dirname(HOST_FILE_PATH));
+  Helpers.openFolderInFileExplorer(path.dirname(HOST_FILE_PATH));
   process.exit(0);
 }
 
