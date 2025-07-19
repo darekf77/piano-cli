@@ -19,7 +19,9 @@ async function VPN(args: string[]) {
 
   const ins = await VpnSplit.Instance({
     ports: [
-      80, 443, 4443, 22, 2222, 8180, 8080, 4407, 9443,
+      80, 443, 4443, 22, 2222,
+       //8180, 8080,
+        4407, 9443,
       // 11020,
       // 11140,
       // 11040,
