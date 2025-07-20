@@ -55,6 +55,24 @@ corePorjectsMap.set(
       proj?.ins?.From(proj?.pathFor('website'))?.name ===
       'piano-vx-website-frontend',
     description: `Piano vx`,
+    buildCommand: async () => {
+      //
+      // choco install corretto21jdk
+      // choco install tomcat
+      // choco install openssl
+      // choco install mkcert
+      // choco install gradle
+
+      // gradle.properties
+      // systemProp.gradle.enterprise.allowUntrustedServer=true
+
+      //       # setup your local properties, remember to turn on the VPN
+      // ./gradlew applyPatch
+      // ./gradlew initComposeEnvironment
+      // # start MySQL and Redis, etc.
+      // ./gradlew developComposeUp
+      // # apply DB migrations scripts
+    },
   }),
 );
 
