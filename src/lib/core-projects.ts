@@ -44,6 +44,27 @@ corePorjectsMap.set(
 );
 //#endregion
 
+//#region ostap-funds
+corePorjectsMap.set(
+  'ostap-funds',
+  CoreProject.from<ProjectPiano>({
+    branches: ['main'],
+    color: '#222279',
+    urlHttp: 'https://gitlab.com/piano/vx/ostap-funds.git',
+    recognizedFn: proj =>
+      proj
+        .readFile('settings.gradle.kts')
+        ?.includes(`rootProject.name = "ostap-funds"`),
+    description: `Ostap funds`,
+    startCommand: async ({ project }) => {
+      project
+        .run(`./gradlew bootRun --args='--spring.profiles.active=local'`)
+        .sync();
+    },
+  }),
+);
+//#endregion
+
 //#region piano-vx
 corePorjectsMap.set(
   'piano-vx',
@@ -62,10 +83,8 @@ corePorjectsMap.set(
       // choco install openssl
       // choco install mkcert
       // choco install gradle
-
       // gradle.properties
       // systemProp.gradle.enterprise.allowUntrustedServer=true
-
       //       # setup your local properties, remember to turn on the VPN
       // ./gradlew applyPatch
       // ./gradlew initComposeEnvironment

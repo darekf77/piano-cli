@@ -23,7 +23,8 @@ export class ProjectResolver extends BaseProjectResolver<ProjectPiano> {
 
     if (
       Helpers.exists([location, 'pom.xml']) ||
-      Helpers.exists([location, 'build.gradle'])
+      Helpers.exists([location, 'build.gradle']) ||
+      Helpers.exists([location, 'gradlew'])
     ) {
       return 'java-backend';
     }

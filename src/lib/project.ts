@@ -1,4 +1,5 @@
 import { BaseProject, Helpers } from 'tnp-helpers/src';
+import { BaseCommandLineFeature } from 'tnp-helpers/src';
 
 import { Git } from './git';
 import { ProjectResolver } from './project-resolver';
@@ -22,15 +23,31 @@ export class ProjectPiano extends BaseProject<ProjectPiano> {
   }
   //#endregion
 
-  async start() {
+  async start(config: BaseCommandLineFeature) {
+    if (this.core) {
+      await this.core.startCommand({
+        project: this,
+        args: config.args,
+        firstArg: config.firstArg,
+        argsWithParams: config.argsWithParams,
+        exitCallback: () => {
+          config._();
+        },
+      });
+      return;
+    }
+
     if (this.hasFile('index.html')) {
       const freePort = await this.assignFreePort(8080);
       Helpers.info(`Starting project on port http://localhost:${freePort}`);
       this.run(`npx http-server -p ${freePort}`).sync();
     } else {
-      Helpers.error(
-        `Start command not implemented for project ${this.name}`,
-      );
+      Helpers.error(`Start command not implemented for project ${this.name}`);
     }
+  }
+
+  async info(): Promise<string> {
+    const superInfo = await super.info();
+    return `Meta project: ${this.core?.name || 'unknown'}\n${superInfo}`;
   }
 }

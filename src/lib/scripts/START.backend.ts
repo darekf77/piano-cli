@@ -5,7 +5,7 @@ import { ProjectPiano } from '../project';
 
 export class $Start extends BaseCommandLineFeature<{}, ProjectPiano> {
   async _() {
-    await this.project.start();
+    await this.project.start(this);
   }
 
   async demo() {
